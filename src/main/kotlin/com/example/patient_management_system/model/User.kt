@@ -14,11 +14,11 @@ data class User(
 
     val username: String,
 
-    val password: String,
+    var password: String,
 
     val role: String,
 
-    @CreatedDate
-    val created_at: Timestamp,
+    @CreatedDate()
+    val created_at: Timestamp? = null
 
 )
