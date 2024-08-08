@@ -7,17 +7,27 @@ import java.sql.Timestamp
 
 @Entity
 @Table
-data class User(
+data class Patient(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
 
+    val patientId: Long,
+
     val username: String,
+
+    val fullname: String,
 
     var password: String,
 
-    val role: String,
+    val age: String,
+
+    val gender: Gender,
+
+    val contact: String,
+
+    val address: String,
 
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
